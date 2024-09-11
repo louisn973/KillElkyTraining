@@ -1,0 +1,33 @@
+body {
+    height: 100vh; /*REALLY IMPORTANT LINE COMMAND TO SPREAD EVERYTHING ON THE PAGE*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 35px;
+    margin: 0;
+    padding: 0 50px;
+    background-color: grey;
+    color: azure;
+}
+
+.part {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    list-style: none;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgb(92, 91, 91);
+    gap: 150px;
+}
+
+.diamonds, .hearts, .clubs, .spades {
+    display: flex;
+    list-style: none;
+    padding: 2px 0px;
+    margin: 0px;
+    gap: 10px;
+
+}
+
