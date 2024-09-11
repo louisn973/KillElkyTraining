@@ -28,6 +28,8 @@ body {
     padding: 2px 0px;
     margin: 0px;
     gap: 10px;
-
 }
 
+input {
+    padding: 15px;
+}

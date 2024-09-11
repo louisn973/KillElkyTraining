@@ -17,3 +17,22 @@ ISJ : indice du statue en jeton
 calculer la fonction qui fait derouler la partie
 
 */
+levels = document.getElementById("levels").onclick();
+smallBlind = document.getElementById("small-blind").onclick() ;
+
+bigBlind = document.getElementById("Big-Blind").onclick();
+
+ante = document.getElementById("ante").onclick();
+
+position = document.getElementById("position").onclick();
+
+tapis = document.getElementById("tapis").onclick();
+
+limper = document.getElementById("limper").onclick() ; //return a boolean
+
+
+function levelFunction() {
+    smallBlind = document.getElementById("small-blind").value;
+    console.log(smallBlind);
+}
+  

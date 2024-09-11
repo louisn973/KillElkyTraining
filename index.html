@@ -7,18 +7,19 @@
     <title>Kill Elky training Simulation</title>
 </head>
 <body>
-    
+    <script src="poker.js"></script>
+
     <ol class="part">
-        <li class="element">Niveaux</li>
-        <li class="element">small blind</li>
-        <li class="element">Big Blind</li>
-        <li class="element">Ante</li>
+        <li class="element levels">Entrer le Niveaux<input type="number" id="levels" onclick="levelFunction()"></input></li>
+        <li class="element small-blind">small blind<input type="number" id="small-blind" onclick="levelFunction()"></input></li>
+        <li class="element Big-Blind">Big Blind<input type="number" id="Big-Blind" onclick="levelFunction()"></input></li>
+        <li class="element ante">Ante<input type="number" id="ante" onclick="levelFunction()"></input></li>
     </ol>
 
     <ol class="part">
-        <li class="element">Position</li>
-        <li class="element">Tapis</li>
-        <li class="element">Limper</li>
+        <li class="element position">Position<input type="number" id="position"></input></li>
+        <li class="element tapis">Tapis<input type="number" id="tapis"></input></li>
+        <li class="element limper">Limper<input id="limper"></input></li>
     </ol>
 
     <div class="part ">
