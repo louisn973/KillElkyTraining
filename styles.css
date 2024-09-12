@@ -17,7 +17,7 @@ body {
     margin: 0;
     list-style: none;
     gap: 10px;
-    padding: 10px;
+    padding: 5px;
     background-color: rgb(92, 91, 91);
     gap: 150px;
 }
@@ -30,6 +30,21 @@ body {
     gap: 10px;
 }
 
+.element {
+    padding: 10px;
+}
+
 input {
-    padding: 15px;
+    padding: 10px;
+}
+
+.cardOne, .cardTwo {
+    display: flex;
+}
+
+.value, .color {
+    list-style: none;
+    font-size: 30px;
+    padding: 10px;
+    margin: 0;
 }
