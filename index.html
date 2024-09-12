@@ -28,52 +28,58 @@
     <div class="part">
         <div class="cardOne">
             <ol class="value">
-                <li id="FirstAce" onclick="">Ace</li>
-                <li id="FirstKing" onclick="">King</li>
-                <li id="FirstQueen" onclick="">Queen</li>
-                <li id="FirstJack" onclick="">Jack</li>
-                <li id="FirstTen" onclick="">Ten</li>
-                <li id="FirstNine" onclick="">Nine</li>
-                <li id="FirstEight" onclick="">Eight</li>
-                <li id="FirstSeven" onclick="">Seven</li>
-                <li id="FirstSix" onclick="">Six</li>
-                <li id="FirstFive" onclick="">Five</li>
-                <li id="FirstFour" onclick="">Four</li>
-                <li id="FirstThree" onclick="">Three</li>
-                <li id="FirstTwo" onclick="">two</li>
+                <li id="firstNumber" onclick="firstValueFunction('Ace')">Ace</li>
+                <li id="firstNumber" onclick="firstValueFunction('King')">King</li>
+                <li id="firstNumber" onclick="firstValueFunction('Queen')">Queen</li>
+                <li id="firstNumber" onclick="firstValueFunction('Jack')">Jack</li>
+                <li id="firstNumber" onclick="firstValueFunction('Ten')">Ten</li>
+                <li id="firstNumber" onclick="firstValueFunction('Nine')">Nine</li>
+                <li id="firstNumber" onclick="firstValueFunction('Eight')">Eight</li>
+                <li id="firstNumber" onclick="firstValueFunction('Seven')">Seven</li>
+                <li id="firstNumber" onclick="firstValueFunction('Six')">Six</li>
+                <li id="firstNumber" onclick="firstValueFunction('Five')">Five</li>
+                <li id="firstNumber" onclick="firstValueFunction('Four')">Four</li>
+                <li id="firstNumber" onclick="firstValueFunction('Three')">Three</li>
+                <li id="firstNumber" onclick="firstValueFunction('Two')">two</li>
             </ol>
             <ol class="color">
-                <li id="First">Hearts</li>
-                <li id="First">Spades</li>
-                <li id="First">Diamonds</li>
-                <li id="First">Clubs</li>
+                <li id="firstColor" onclick="firstColorFunction('Hearts')">Hearts</li>
+                <li id="firstColor" onclick="firstColorFunction('Spades')">Spades</li>
+                <li id="firstColor" onclick="firstColorFunction('Diamonds')">Diamonds</li>
+                <li id="firstColor" onclick="firstColorFunction('Clubs')">Clubs</li>
             </ol>
         </div>
         <div class="cardTwo">
             <ol class="value">
-                <li>Ace</li>
-                <li>King</li>
-                <li>Queen</li>
-                <li>Jack</li>
-                <li>Ten</li>
-                <li>Nine</li>
-                <li>Eight</li>
-                <li>Seven</li>
-                <li>Six</li>
-                <li>Five</li>
-                <li>Four</li>
-                <li>Three</li>
-                <li>two</li>
+                <li id="secondNumber" onclick="secondNumberFunction('Ace')">Ace</li>
+                <li id="secondNumber" onclick="secondNumberFunction('King')">King</li>
+                <li id="secondNumber" onclick="secondNumberFunction('Queen')">Queen</li>
+                <li id="secondNumber" onclick="secondNumberFunction('Jack')">Jack</li>
+                <li id="secondNumber" onclick="secondNumberFunction('Ten')">Ten</li>
+                <li id="secondNumber" onclick="secondNumberFunction('Nine')">Nine</li>
+                <li id="secondNumber" onclick="secondNumberFunction('Eight')">Eight</li>
+                <li id="secondNumber" onclick="secondNumberFunction('Seven')">Seven</li>
+                <li id="secondNumber" onclick="secondNumberFunction('Six')">Six</li>
+                <li id="secondNumber" onclick="secondNumberFunction('Five')">Five</li>
+                <li id="secondNumber" onclick="secondNumberFunction('Four')">Four</li>
+                <li id="secondNumber" onclick="secondNumberFunction('Three')">Three</li>
+                <li id="secondNumber" onclick="secondNumberFunction('two')">two</li>
             </ol>
             <ol class="color">
-                <li>Hearts</li>
-                <li>Spades</li>
-                <li>Diamonds</li>
-                <li>Clubs</li>
+                <li id="secondColor" onclick="secondColorFunction('Hearts')">Hearts</li>
+                <li id="secondColor" onclick="secondColorFunction('Spades')">Spades</li>
+                <li id="secondColor" onclick="secondColorFunction('Diamonds')">Diamonds</li>
+                <li id="secondColor" onclick="secondColorFunction('Clubs')">Clubs</li>
             </ol>
         </div>
-        <button id="cards" onclick="generatecardsFunction()">Generate the cards</button>
-<!--
+        <div>
+            <button id="cards" onclick="generatecardsFunction()">Generate the cards</button>
+            <p>first cards</p>
+            <div id="firstCards"></div>
+            <p>second cards</p>
+            <div id="secondCards"></div>
+        </div>
+        <!--
         <div class="cards">
         <ol class="hearts">
             <li><a href="" class="as hearts"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/English_pattern_ace_of_hearts.svg/800px-English_pattern_ace_of_hearts.svg.png" alt="as hearts" height="100"></a></li>

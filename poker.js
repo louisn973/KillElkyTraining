@@ -60,18 +60,64 @@ function limperFunction() {
     }
 }
 
-
+//////////////////////////////////////////////////////////////////////////////
 var cardOneValue;
+
+//firstNumber = document.getElementById("firstNumber");
+
+//firstNumber.addEventListener("click", firstValueFunction)
+
+function firstValueFunction(element) {
+    cardOneValue = element;
+    //console.log(cardOneValue)
+}
+
+///
 var cardOneColor;
 
+//firstColor = document.getElementById("firstColor")
+
+//firstColor.addEventListener("click", firstColorFunction);
+
+function firstColorFunction(element) {
+    cardOneColor = element;
+    //console.log(cardOneColor)
+}
+
+///
 var cardTwoValue;
+
+//secondNumber = document.getElementById("secondNumber");
+//secondNumber.addEventListener()
+
+
+function secondNumberFunction(element) {
+    cardTwoValue = element;
+    //console.log(cardTwoValue)
+}
+
+///
+
 var cardTwoColor;
 
+//secondColor = document.getElementById("secondColor");
 
-function cardOne(cardOneValue, cardOneColor) {
+function secondColorFunction(element) {
+    cardTwoColor = element;
+    //console.log(cardTwoColor)
+}
+//////////////////////////////////////////////////////////////////////////////
+
+function cardOneFunction(cardOneValue, cardOneColor) {
     return cardOne = [cardOneValue, cardOneColor];
 }
 
-function cardTwo(cardTwoValue, cardTwoColor) {
+function cardTwoFunction(cardTwoValue, cardTwoColor) {
     return cardTwo = [cardTwoValue, cardTwoColor];
+}
+
+function generatecardsFunction() {
+    console.log(cardOneFunction(cardOneValue, cardOneColor));
+    console.log(cardTwoFunction(cardTwoValue, cardTwoColor));
+    console.log("working")
 }
