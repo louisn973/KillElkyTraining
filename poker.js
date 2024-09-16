@@ -3,8 +3,11 @@ var smallBlindValue;
 var bigBlindValue;
 var anteValue;
 var positionValue;
+var numberPlayer;
 var tapisValue;
 var limperValue;
+var CPTValue;
+var ISJValue;
 
 levels = document.getElementById("levels");
 levels.addEventListener("click", levelsFunction);
@@ -49,6 +52,13 @@ function tapisFunction() {
     tapisValue = Number(document.getElementById("tapis").value);
 }
 
+numberPlayer = document.getElementById("nbPlayer").onclick();
+numberPlayer.addEventListener("click", numberPlayerFunction)
+
+function numberPlayerFunction() {
+    numberPlayer = Number(document.getElementById("nbPlayer").value);
+}
+
 limper = document.getElementById("limper").onclick() ; //return a boolean
 limper.addEventListener("click", limperFunction);
 
@@ -59,7 +69,7 @@ function limperFunction() {
         limperValue = false;
     }
 }
-
+//creating the two card of the player
 //////////////////////////////////////////////////////////////////////////////
 var cardOneValue;
 
@@ -106,7 +116,6 @@ function secondColorFunction(element) {
     cardTwoColor = element;
     //console.log(cardTwoColor)
 }
-//////////////////////////////////////////////////////////////////////////////
 
 function cardOneFunction(cardOneValue, cardOneColor) {
     return cardOne = [cardOneValue, cardOneColor];
@@ -115,9 +124,103 @@ function cardOneFunction(cardOneValue, cardOneColor) {
 function cardTwoFunction(cardTwoValue, cardTwoColor) {
     return cardTwo = [cardTwoValue, cardTwoColor];
 }
+//////////////////////////////////////////////////////////////////////////////
+
+function CPTFunction() {
+    CPTValue = smallBlindValue + bigBlindValue + numberPlayer*anteValue ;
+}
+
+function ISJFunction() {
+    ISJValue = tapisValue/CPTValue;
+}
 
 function generatecardsFunction() {
     console.log(cardOneFunction(cardOneValue, cardOneColor));
     console.log(cardTwoFunction(cardTwoValue, cardTwoColor));
-    console.log("working")
+    console.log("working");
+    console.log(typeof smallBlindValue);
+    console.log(smallBlindValue);
+    console.log(typeof bigBlindValue);
+    console.log( bigBlindValue);
+    console.log(typeof anteValue);
+    console.log(anteValue);
+    console.log(typeof numberPlayer);
+    console.log(numberPlayer);
+    CPTFunction();
+    console.log(CPTValue);
+    ISJFunction();
+    console.log(ISJValue);
+
+    //call the function that make the decision
 }
+
+////////////////////////////////////////////////////////////////////////////
+//creating the function that return true or false for each group
+
+function isSuitedFunction(cardOneColor, cardTwoColor) {
+    return cardOneColor === cardTwoColor;
+}
+
+// group 1 :
+function groupOneFunction() {
+    //test if caronevalue is same as cartwovalue
+    //return ture if same
+}
+
+//group 2 :
+function groupTwoFunction() {
+    //if cardonecolor == cardtwocolor ==queen 
+    //or cardonevalue = ace and cardtwovalue = king 
+    //or cardonevalue = king and cardtwovalue = ace
+    //return true 
+}
+
+//group 3 :
+function groupThreeFunction() {
+    //if cardonevalue = cardtwovalue === jack or ten or 9
+}
+
+//group 4 :
+function groupFourFunction() {
+
+}
+
+//group 5 :
+function groupFiveFunction() {
+
+}
+
+//group 6 :
+function groupSixFunction() {
+
+}
+
+//group 7 :
+function groupSevenFunction() {
+
+}
+
+//group 8 :
+function groupEightFunction() {
+
+}
+
+//group 9 :
+function groupNineFunction() {
+
+}
+
+//group 10 :
+function groupTenFunction() {
+
+}
+
+//function that do the choice of action
+
+//if isj>30 :
+
+//if isj > 10 and isj < 30 :
+
+//if isj < 10 and isj > 4 :
+
+//if isj < 4 :
