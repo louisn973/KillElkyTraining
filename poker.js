@@ -43,6 +43,7 @@ position.addEventListener("click", positionFunction);
 
 function positionFunction() {
     positionValue = Number(document.getElementById("position").value);
+    return positionValue;
 }
 
 tapis = document.getElementById("tapis").onclick();
@@ -413,79 +414,82 @@ function groupTenFunction() {
 //function that do the choice of action
 function creatChoiceFunction() {
     ////////////////////////////
-    CPTFunction();
-    console.log(CPTFunction());
     ISJFunction();
-    console.log(ISJFunction());
-    ////
-    console.log(limperFunction())
+    console.log('Isj is : '+ISJFunction());
     ////////////////////////////
 
     if (ISJFunction() > 10) {
-        if (limperFunction()) {
-            
-            
+        if (limperFunction() === false ) {
+            if ([groupOneFunction(), groupTwoFunction(), groupThreeFunction(), groupFourFunction(), groupFiveFunction()].includes(true)) {
+                console.log('All-in !');
+            } else {
+                console.log('Fold');
+            }
+        } else if (limperFunction() === true) {
+            if ([5,6,7,8,9,10].includes(positionFunction()) && [groupOneFunction(), groupTwoFunction()].includes(true)) {
+                console.log('All-in !');
+            } else if ([3,4].includes(positionFunction()) && [groupOneFunction(), groupTwoFunction(), groupThreeFunction()].includes(true)) {
+                console.log('All-in !');  
+            } else if ([1,2].includes(positionFunction()) && [groupOneFunction(), groupTwoFunction(), groupThreeFunction(), groupFourFunction()].includes(true)) {
+                console.log('All-in !');
+            } else {
+                console.log('Fold');
+            }
+        } else {
+            console.log('Fold!');
         }
-        //if limpers is no
-            //if position === [precoce and intermediaire]
-            //use group 1 and 2
-            //if position === [tardive]
-            //use group 1 2 and 3
-            //if blind
-            //use group 1 to 5
-            //else fold
-        //if limpers is yes
-            //if position === [precoce and intermediaire]
-            //use group 1 and 2
-            //if position === [tardive]
-            //use group 1 2 and 3
-            //if blind
-            //use group 1 to 4
-            //else fold
     } else if (ISJFunction() > 4 && ISJFunction() < 10) {
-        //if limpers is no
-            //if position === [precoce]
-            //use group 1 to 5
-            //if position === [intermediaire]
-            //use group 1 to 7
-            //if blind and tardive
-            //use group 1 to 5 and 8
-            //else fold
-        //if limpers is yes
-            //if position === [precoce]
-            //use group 1 to 3
-            //if position === [intermediaire et tardive]
-            //use group 1 to 5 and 7
-            //if blind
-            //use group 1 to 5 and 7
-            //else fold
+        if (limperFunction() === false) {
+            if ([8,9,10].includes(positionFunction()) && [groupOneFunction(), groupTwoFunction(), groupThreeFunction(), groupFourFunction(),groupFiveFunction()].includes(true)) {
+                console.log('All-in !');
+            } else if ([5,6,7].includes(positionFunction()) && [groupOneFunction(), groupTwoFunction(), groupThreeFunction(), groupFourFunction(), groupFiveFunction(), groupSixFunction(), groupSevenFunction()].includes(true)) {
+                console.log('All-in !');
+            } else if ([1,2,3,4].includes(positionFunction()) && [groupOneFunction(),groupTwoFunction(),groupThreeFunction(),groupFourFunction() ,groupFiveFunction() ,groupEightFunction()].includes(true)) {
+                console.log('All-in !');
+            } else {
+                console.log('Fold');
+            }
+        } else if (limperFunction() === true) {
+            if ([8,9,10].includes(positionFunction()) && [groupOneFunction(), groupTwoFunction(), groupThreeFunction()].includes(true)) {
+                console.log('All-in !');
+            } else if ([1,2,3,4,5,6,7].includes(positionFunction()) && [groupOneFunction(),groupTwoFunction(), groupThreeFunction(), groupFourFunction(), groupFiveFunction(), groupSevenFunction()].includes(true) ) {
+                console.log('All-in !');
+            } else {
+                console.log('Fold');
+            }
+        } else {
+            console.log('Fold');
+        }
     } else if (ISJFunction() < 4) {
-                
+        if (limperFunction() === false) {
+            if ([8,9,10].includes(positionFunction()) && [groupOneFunction(),groupTwoFunction(), groupThreeFunction(), groupFourFunction(), groupFiveFunction(), groupSixFunction(), groupSevenFunction()].includes(true)) {
+                console.log('All-in !');                
+            } else if ([5,6,7].includes(positionFunction()) && [groupOneFunction(),groupTwoFunction(), groupThreeFunction(), groupFourFunction(), groupFiveFunction(), groupSixFunction(), groupSevenFunction(), groupEightFunction()].includes(true)) {
+                console.log('All-in !');                
+            } else if ( [1,2,3,4].includes(positionFunction()) && [groupOneFunction(),groupTwoFunction(), groupThreeFunction(), groupFourFunction(), groupFiveFunction(), groupSixFunction(), groupSevenFunction(), groupEightFunction(), groupNineFunction(), groupTenFunction()].includes(true)) {
+                console.log('All-in !');                
+            } else {
+                console.log('Fold !');
+            }
+        } else if (limperFunction() === true) {
+            if ([8,9,10].includes(positionFunction()) && [groupOneFunction(),groupTwoFunction(), groupThreeFunction(), groupFourFunction(), groupFiveFunction()].includes(true)) {
+                console.log('All-in !');                
+            } else if ([5,6,7].includes(positionFunction()) && [groupOneFunction(),groupTwoFunction(), groupThreeFunction(), groupFourFunction(), groupFiveFunction(), groupSevenFunction(), groupEightFunction()].includes(true)) {
+                console.log('All-in !');                
+            } else if ( [1,2,3,4].includes(positionFunction()) && [groupOneFunction(),groupTwoFunction(), groupThreeFunction(), groupFourFunction(), groupFiveFunction(), groupSevenFunction(), groupEightFunction()].includes(true)) {
+                console.log('All-in !');                
+            } else {
+                console.log('Fold !');
+            }
+        }
+    } else {
+        console.log('Fold');
     }
-
-    //if isj>30 :
-
-    //if isj > 10 and isj < 30 :
-
-    //if isj < 10 and isj > 4 :
-
-    //if isj < 4 :
-
-
-
 }
-//if isj>30 :
-
-//if isj > 10 and isj < 30 :
-
-//if isj < 10 and isj > 4 :
-
-//if isj < 4 :
 
 function generatecardsFunction() {
     console.log(cardOneFunction(cardOneValue, cardOneColor));
     console.log(cardTwoFunction(cardTwoValue, cardTwoColor));
-    groupTenFunction();
     //call the function that make the decision
     creatChoiceFunction()
 }
